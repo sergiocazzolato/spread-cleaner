@@ -12,5 +12,10 @@ if [ ! -f "$SNAP_DATA/sa.json" ]; then
 fi
 echo "Using service account: $SNAP_DATA/sa.json"
 
+if [ ! -f "$SNAP_DATA/spread" ]; then
+    echo "Getting spread"
+    cd "$SNAP_DATA" && curl -s -O https://niemeyer.s3.amazonaws.com/spread-amd64.tar.gz && tar xzvf spread-amd64.tar.gz
+fi
+
 export SPREAD_GOOGLE_KEY="$SNAP_DATA/sa.json"
-cd "$SNAP_DATA" && "$SNAP/bin/spread" -gc google
+cd "$SNAP_DATA" && "$SNAP_DATA/spread" -gc google

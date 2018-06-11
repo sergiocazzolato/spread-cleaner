@@ -18,8 +18,4 @@ parts:
     copy:
         plugin: dump
         source: .
-
-    spread:
-        plugin: go
-        go-packages:
-            - github.com/snapcore/spread/cmd/spread
+        stage-packages: [curl]
