@@ -1,5 +1,5 @@
-name: spread-cleaner
-version: 1.0.5
+name: spread-gce-cleaner
+version: 1.0.0
 summary: Basic snap used to clean machines on gce through spread -gc
 description: Basic snap used to clean machines on gce through spread -gc
 confinement: strict
