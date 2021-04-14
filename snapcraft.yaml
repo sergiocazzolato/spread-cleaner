@@ -4,6 +4,7 @@ summary: Basic snap used to clean machines on gce through spread -gc
 description: Basic snap used to clean machines on gce through spread -gc
 confinement: strict
 grade: stable
+base: core18
 
 apps:
     runner:
